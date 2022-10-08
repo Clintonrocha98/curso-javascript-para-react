@@ -1,8 +1,13 @@
-import CardGame from "./src/components/CardGame"
-import "./src/css/styles.css"
-// import PlayerScore from "./src/components/PlayerScore"
+import "./src/styles/settings/colors.css";
+import "./src/styles/generic/reset.css";
+import "./src/styles/elements/base.css";
+
+import ContainerApp from "./src/components/ContainerApp";
+
 
 const $app = document.querySelector("#app")
-const htmlCardGame = CardGame()
 
-$app.insertAdjacentHTML("beforeend", htmlCardGame)
+
+const htmlContainerApp = ContainerApp()
+
+$app.insertAdjacentHTML("beforeend", htmlContainerApp)

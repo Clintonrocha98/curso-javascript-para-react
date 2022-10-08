@@ -1,5 +1,11 @@
+import "./style.css";
+
 function CardGame(){
-    return `<h1 class="nome">Clinton Rocha</h1>`
+    return `
+    <article class="card-game">
+        <img class="cat" src="img/cat.jpg">
+    </article>
+    `
 }
 
 export default CardGame;
