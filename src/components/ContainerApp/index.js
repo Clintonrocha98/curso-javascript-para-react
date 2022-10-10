@@ -1,17 +1,15 @@
-import HeaderContainer from "../HeaderContainer";
-import ContainerCard from "../ContainerCard";
+import './style.css';
+import HeaderContainer from '../HeaderContainer';
+import ContainerCard from '../ContainerCard';
 
-function ContainerApp(){
-    const htmlHeaderContainer = HeaderContainer()
-    const htmlContainerCard = ContainerCard(6)
-
-    const htmlContainerApp = `
+function ContainerApp() {
+  const htmlContainerApp = `
         <div class="app-container">
-        ${htmlHeaderContainer}
-        ${htmlContainerCard}
+            ${HeaderContainer()}
+            ${ContainerCard(6)}
         </div>
-    `
-    
-    return htmlContainerApp;
+    `;
+
+  return htmlContainerApp;
 }
 export default ContainerApp;

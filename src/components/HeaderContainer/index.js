@@ -1,16 +1,18 @@
-import PlayerInfo from "../PlayerInfo"
+import './style.css';
+import PlayerInfo from '../PlayerInfo';
 
-function HeaderContainer(){
-    const htmlPlayerInfo = PlayerInfo(1)
-    const htmlPlayerInfo2 = PlayerInfo(2)
-    const htmlHeaderContainer = `
+function HeaderContainer() {
+  return `
         <header class="header-container">
-            ${htmlPlayerInfo}
-            <p>VS<p>
-            ${htmlPlayerInfo2}
+            <div class="left">
+                ${PlayerInfo(1)}
+            </div>
+            <p class="vs">VS<p>
+            <div class="rigth">
+                ${PlayerInfo(2)}
+            </div>
         </header>
-    `
-    return htmlHeaderContainer
+    `;
 }
 
 export default HeaderContainer;

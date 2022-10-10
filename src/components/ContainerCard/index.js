@@ -1,12 +1,11 @@
-import CardGame from "../CardGame"
+import FrontBackCard from '../FrontBackCard';
+import './style.css';
 
-function ContainerCard(amountCards){
-    const htmlCardGame = CardGame()
-    const htmlContainerCard = `
+function ContainerCard(amountCards) {
+  return `
         <div class="container-card">
-            ${htmlCardGame.repeat(amountCards)}
+            ${FrontBackCard().repeat(amountCards)}
         <div>
-    `
-    return htmlContainerCard;
+    `;
 }
 export default ContainerCard;

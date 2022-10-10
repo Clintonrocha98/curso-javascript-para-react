@@ -1,13 +1,10 @@
-import "./src/styles/settings/colors.css";
-import "./src/styles/generic/reset.css";
-import "./src/styles/elements/base.css";
+import './src/styles/settings/colors.css';
 
-import ContainerApp from "./src/components/ContainerApp";
+import './src/styles/generic/reset.css';
 
+import './src/styles/elements/base.css';
 
-const $app = document.querySelector("#app")
+import ContainerApp from './src/components/ContainerApp';
 
-
-const htmlContainerApp = ContainerApp()
-
-$app.insertAdjacentHTML("beforeend", htmlContainerApp)
+const $app = document.querySelector('#app');
+$app.insertAdjacentHTML('beforeend', `${ContainerApp()}`);
