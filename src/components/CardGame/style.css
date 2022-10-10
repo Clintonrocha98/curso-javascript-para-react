@@ -2,7 +2,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    position: relative;
     width: 130px;
     height: 160px;
     background-color: var(--color-alura);
@@ -11,7 +10,6 @@
     transform-style: preserve-3d;
 }
 .card-game img{
-    position: absolute;
     width: 95px;
 }
 .flip{
