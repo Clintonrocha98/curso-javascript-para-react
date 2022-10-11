@@ -1,13 +1,12 @@
-.player{
-}
-.placar{
+.warrap-placar{
     display: flex;
-    width: 100px;
-    height: 25px;
-    border: 1px solid black;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 30px;
 }
-.placar .point{
-    width: 33.33px;
-    height: auto;
-    border: 0.5px solid black;
+.warrap-placar > .turn{
+    opacity: 0;
+}
+.warrap-placar > .turn.-active{
+    opacity: 1;
 }

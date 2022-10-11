@@ -10,8 +10,8 @@ function FrontBackCard() {
         <div class="card -back">
             ${CardGame('css', 'logo css')}
         </div>
-        
     </article>
-  `;
+    `;
 }
+
 export default FrontBackCard;

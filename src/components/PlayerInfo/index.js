@@ -1,13 +1,12 @@
+import ScoreBoard from '../ScoreBoard';
 import './style.css';
 
-function PlayerInfo(player) {
+export default function PlayerInfo(player, point) {
   return `
-        <h1 class="player">Player${player}</h1>
-        <div class="placar">
-            <div class="point"></div>
-            <div class="point"></div>
-            <div class="point"></div>
-        </div>
-    `;
+    <h1 class="player">${player}</h1>
+    <div class="warrap-placar">
+        <div class="turn">V</div>
+        ${ScoreBoard(point)}
+    </div>
+`;
 }
-export default PlayerInfo;
