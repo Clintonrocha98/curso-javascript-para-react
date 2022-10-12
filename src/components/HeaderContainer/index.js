@@ -5,11 +5,11 @@ export default function HeaderContainer() {
   return `
     <header class="header-container">
         <div class="left">
-            ${PlayerInfo('Player1', 1)}
+            ${PlayerInfo('Player1', 0)}
         </div>
         <p class="vs">VS<p>
         <div class="rigth">
-            ${PlayerInfo('Player2', 1)}
+            ${PlayerInfo('Player2', 0)}
         </div>
     </header>
 `;
