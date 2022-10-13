@@ -5,8 +5,8 @@ import ContainerCard from '../ContainerCard';
 export default function ContainerApp() {
   const htmlContainerApp = `
     <div class="app-container">
-        ${HeaderContainer()}
-        ${ContainerCard(6)}
+        ${HeaderContainer(1)}
+        ${ContainerCard()}
     </div>
 `;
 
