@@ -9,16 +9,16 @@
     font-family: 'Silkscreen', cursive;
     font-size: 2rem;
 }
-.header-container > .indicator{
+.header-container > .indicador{
     position: absolute;
     top: 0;
     transition: all 1s ease-in-out;
 }
-.header-container > .indicator[data-currentPlayer="1"]{
+.header-container > .indicador[data-currentPlayer="1"]{
     transform: translateX(-100px);
     
 }
-.header-container > .indicator[data-currentPlayer="0"]{
+.header-container > .indicador[data-currentPlayer="0"]{
     transform: translateX(94px);
 }
 
