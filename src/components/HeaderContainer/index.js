@@ -9,7 +9,7 @@ export default function HeaderContainer() {
             data-currentPlayer="1"
         >V</div>
         <div class="left">
-            ${PlayerInfo('Player1', 1)}
+            ${PlayerInfo('Player1', 0)}
         </div>
         <p class="vs">VS<p>
         <div class="rigth">
