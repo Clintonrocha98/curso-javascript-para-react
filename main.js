@@ -29,22 +29,28 @@ function RotateCard() {
 }
 function CompareLetter() {
   const cardsActive = document.querySelectorAll('.card-front-back.-active');
+  const cardimg = document.querySelectorAll('.card-front-back.-active>.card.-back>.card-game>.cardImg');
   if (cardsActive.length === 2) {
-    const cardimg = document.querySelectorAll('.card-front-back.-active>.card.-back>.card-game>.cardImg');
-    console.log(cardimg);
-    // cardimg.forEach((card1, card2) => {
-    //   const atributImg = card1.getAttribute('src');
-    //   const atributImg2 = card2.getAttribute('src');
-    //   if (atributImg === atributImg2) {
-    //     console.log('oi');
-    //   }
-    // });
+    const cardimg1 = cardimg[0].getAttribute('src');
+    const cardimg2 = cardimg[1].getAttribute('src');
+    return cardimg1 === cardimg2;
+  }
+  if (cardsActive.length === 4) {
+    const cardimg1 = cardimg[2].getAttribute('src');
+    const cardimg2 = cardimg[3].getAttribute('src');
+    return cardimg1 === cardimg2;
+  }
+  if (cardsActive.length === 6) {
+    const cardimg1 = cardimg[4].getAttribute('src');
+    const cardimg2 = cardimg[5].getAttribute('src');
+    return cardimg1 === cardimg2;
   }
 }
 cardfrontback.forEach((element) => {
   element.addEventListener('click', () => {
     element.classList.toggle('-active');
-    RotateCard();
-    CompareLetter();
+    if (CompareLetter() === false) {
+      RotateCard();
+    }
   });
 });
