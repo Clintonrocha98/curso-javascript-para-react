@@ -26,31 +26,44 @@ function RotateCard() {
     }, 550);
     ArrowDown();
   }
+  if (cardsActive.length === 4) {
+    setTimeout(() => {
+      cardsActive[2].classList.remove('-active');
+      cardsActive[3].classList.remove('-active');
+    }, 550);
+    ArrowDown();
+  }
 }
 function CompareLetter() {
   const cardsActive = document.querySelectorAll('.card-front-back.-active');
   const cardimg = document.querySelectorAll('.card-front-back.-active>.card.-back>.card-game>.cardImg');
+  let cardimg1;
+  let cardimg2;
   if (cardsActive.length === 2) {
-    const cardimg1 = cardimg[0].getAttribute('src');
-    const cardimg2 = cardimg[1].getAttribute('src');
-    return cardimg1 === cardimg2;
+    cardimg1 = cardimg[0].getAttribute('src');
+    cardimg2 = cardimg[1].getAttribute('src');
+    if (cardimg1 !== cardimg2) {
+      RotateCard();
+    }
   }
   if (cardsActive.length === 4) {
-    const cardimg1 = cardimg[2].getAttribute('src');
-    const cardimg2 = cardimg[3].getAttribute('src');
-    return cardimg1 === cardimg2;
+    cardimg1 = cardimg[2].getAttribute('src');
+    cardimg2 = cardimg[3].getAttribute('src');
+    if (cardimg1 !== cardimg2) {
+      RotateCard();
+    }
   }
-  if (cardsActive.length === 6) {
-    const cardimg1 = cardimg[4].getAttribute('src');
-    const cardimg2 = cardimg[5].getAttribute('src');
-    return cardimg1 === cardimg2;
+  if (cardsActive.length === 6 && cardimg1 === cardimg2) {
+    cardimg1 = cardimg[4].getAttribute('src');
+    cardimg2 = cardimg[5].getAttribute('src');
+    if (cardimg1 !== cardimg2) {
+      RotateCard();
+    }
   }
 }
 cardfrontback.forEach((element) => {
   element.addEventListener('click', () => {
     element.classList.toggle('-active');
-    if (CompareLetter() === false) {
-      RotateCard();
-    }
+    CompareLetter();
   });
 });
